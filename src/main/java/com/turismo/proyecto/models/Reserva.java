@@ -5,9 +5,6 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 import java.time.LocalDate;
-import java.util.List;
-import jakarta.persistence.EntityGraph;
-
 
 
 @Data
@@ -32,6 +29,5 @@ public class Reserva {
     @JoinColumn(name = "experiencia_id", nullable = false)
     private Experiencia experiencia;
 
-    @EntityGraph(attributePaths = {"usuario"})
-    public List<Reserva> findAll();
+    
 }
